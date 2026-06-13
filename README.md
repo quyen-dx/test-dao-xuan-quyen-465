@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Test ReactJS Intern - Đào Xuân Quyến
 
-## Getting Started
+## Giới thiệu
 
-First, run the development server:
+Đây là bài test ReactJS Intern được xây dựng bằng Next.js và TypeScript.
+
+Ứng dụng mô phỏng giao diện xem video ngắn dạng cuộn dọc giống TikTok hoặc Facebook Reels.
+
+## Chức năng đã làm
+
+-Hiển thị danh sách video bằng dữ liệu giả.
+-Cuộn dọc từng video.
+-Click vào video để phát hoặc tạm dừng.
+-Tự động phát video khi cuộn tới.
+-Tự động dừng video khi cuộn sang video khác.
+-Thả tim và tăng/giảm số lượt thích.
+-Responsive trên Desktop và Mobile.
+-Navbar bên trái trên Desktop và dưới cùng trên Mobile.
+
+## Cách xử lý Auto Play / Pause
+
+Mình sử dụng Intersection Observer API để theo dõi từng Video Card.
+
+Khi video xuất hiện đủ trong màn hình thì video sẽ tự phát.
+
+Khi người dùng cuộn sang video khác thì video cũ sẽ tự dừng.
+
+Mình sử dụng:
+
+```ts
+threshold: 0.7
+```
+
+Điều này có nghĩa là video cần xuất hiện khoảng 70% trong màn hình thì mới được coi là đang được xem.
+
+## Cách xử lý Play / Pause
+
+Sử dụng useRef để lấy thẻ video.
+
+Khi click vào video:
+
+-Nếu video đang dừng thì phát.
+-Nếu video đang phát thì tạm dừng.
+
+## Cách chạy dự án
+
+Cài package:
+
+```bash
+npm install
+```
+
+Chạy dự án:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Mở trình duyệt:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```txt
+http://localhost:3000
+```
