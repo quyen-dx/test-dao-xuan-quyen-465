@@ -38,9 +38,10 @@ body {
 .video-info {
   position: absolute;
   left: 16px;
-  bottom: 32px;
+  bottom: 120px;
   color: white;
   max-width: 280px;
+  z-index: 5;
 }
 
 .video-info h2 {
@@ -56,12 +57,13 @@ body {
 .action-buttons {
   position: absolute;
   right: 14px;
-  bottom: 90px;
+  bottom: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 6px;
   color: white;
+  z-index: 5;
 }
 
 .action-buttons button {
@@ -75,18 +77,12 @@ body {
   cursor: pointer;
 }
 
+.action-buttons p,
 .action-buttons span {
   font-size: 12px;
-  margin-bottom: 8px;
+  margin: 0 0 8px;
 }
 
-@media (min-width: 768px) {
-  .video-wrapper {
-    height: 92vh;
-    aspect-ratio: 9 / 16;
-    border-radius: 20px;
-  }
-}
 .nav-bar {
   position: fixed;
   left: 24px;
@@ -109,6 +105,22 @@ body {
 
 .nav-bar span {
   margin-left: 8px;
+}
+
+@media (min-width: 768px) {
+  .video-wrapper {
+    height: 92vh;
+    aspect-ratio: 9 / 16;
+    border-radius: 20px;
+  }
+
+  .video-info {
+    bottom: 32px;
+  }
+
+  .action-buttons {
+    bottom: 90px;
+  }
 }
 
 @media (max-width: 767px) {
