@@ -148,4 +148,13 @@ body {
     margin-top: 4px;
     font-size: 11px;
   }
+
+  .video-info {
+    bottom: 150px;
+  }
+
+  .action-buttons {
+    bottom: 170px;
+  }
+
 }
