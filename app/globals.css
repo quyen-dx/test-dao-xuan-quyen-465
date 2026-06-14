@@ -154,10 +154,10 @@ body {
     font-size: 11px;
   }
   .video-info {
-    bottom: calc(60px + env(safe-area-inset-bottom, 16px) + 80px);
+    bottom: calc(60px + env(safe-area-inset-bottom, 16px) + 16px);
   }
 
   .action-buttons {
-    bottom: calc(60px + env(safe-area-inset-bottom, 16px) + 80px);
+    bottom: calc(60px + env(safe-area-inset-bottom, 16px) + 16px);
   }
 }
