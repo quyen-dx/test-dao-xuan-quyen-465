@@ -134,6 +134,7 @@ body {
     justify-content: space-around;
     background: rgba(0, 0, 0, 0.85);
     padding: 10px 0;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom));
   }
 
   .nav-bar a {
@@ -150,11 +151,10 @@ body {
   }
 
   .video-info {
-    bottom: 150px;
+    bottom: calc(170px + env(safe-area-inset-bottom));
   }
 
   .action-buttons {
-    bottom: 170px;
+    bottom: calc(190px + env(safe-area-inset-bottom));
   }
-
 }
